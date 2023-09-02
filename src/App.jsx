@@ -8,6 +8,7 @@ import Navigation from './components/ROUTES/navigation/navigation.component'
 import AdPage from './components/ad-page/ad-page.component'
 import Info from './components/ROUTES/info/info.component'
 import WinnerPage from './components/ROUTES/winner/winner.component'
+import UserForm from './components/user-form/user-form.component'
 
 const App=()=> {
   return (
@@ -17,6 +18,7 @@ const App=()=> {
         <Route path='clickad' element={<AdPage/>}/>
         <Route path='info' element={<Info/>}/>
         <Route path='winner' element={<WinnerPage/>}/>
+        <Route path='user-form-sub' element={<UserForm/>}/>
       </Route>
     </Routes>
   )

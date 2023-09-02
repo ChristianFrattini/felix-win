@@ -1,0 +1,36 @@
+.user-form-container{
+    display:flex;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: cadetblue;*/
+
+    .submit-button {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text color */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        padding: 10px 20px; /* Padding for spacing */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s ease; /* Smooth hover effect */
+      }
+      
+      /* Hover Effect */
+      .submit-button:hover {
+        background-color: #45a049; /* Darker green on hover */
+      }
+
+      .span{
+        color: red;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 50px;
+        font-weight: bolder;
+        
+        
+      }
+    
+}
+

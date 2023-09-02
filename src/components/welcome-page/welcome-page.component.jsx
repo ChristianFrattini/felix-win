@@ -12,9 +12,10 @@ const WelcomePage=()=>{
     return(
         <div className='welcome-info-container'>
             <div className='welcome-container'>
-                <h1 className='welcome'>Welcome to the Website</h1>
+                <h1 className='welcome'>Welcome to FelixWin</h1>
             </div>
             <div className='introduction-container'>
+                <h3 className='h3-info'>The extraction date is currently set on the 25th of each month at 12.00PM GMT</h3>
                 <span className='span-info'>Please read the info panel before entering for the prize draw</span>
             </div>
             <div className='button-container'>
