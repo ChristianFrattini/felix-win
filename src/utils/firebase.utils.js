@@ -1,5 +1,6 @@
 import {initializeApp} from 'firebase/app'
-import {getFirestore, setDoc, getDoc, doc} from 'firebase/firestore'
+import {getFirestore, setDoc, getDoc, doc, collection} from 'firebase/firestore'
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyBCSBXYV4CnNzfIVQRzJ0bYMnYjR_w2QJQ",
@@ -29,25 +30,48 @@ const firebaseConfig = {
     return code;
   }
 
+  const emailChecker= async(email)=>{
+    const docRef = doc(db, 'users', email);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+        console.log("Document data: existing");
+        alert('Email already registered for the prize draw')
+        return
+    } else {
+        // docSnap.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }
+
+
+
+
+
   export const createUserDocument=async (nickname, email)=>{
     const id=createUniqueId(50)
     console.log(id)
-    const userDocRef = doc(db,'users', id)
 
-    //console.log(userDocRef);
+    if(emailChecker(email)){
+
+    const userDocRef = doc(db,'users', email)
+
+    console.log('here')
 
     const userSnapshot=await getDoc(userDocRef);
-    //console.log(userSnapshot);
 
     if(!userSnapshot.exists()){  //if document does not exist then create one
-      //const{ displayName, email}=userAuth;
       const createdAt= new Date(); // creates date
 
       try{
-        await setDoc(userDocRef, {nickname,email,createdAt, id})
+        await setDoc(userDocRef, {nickname,email,createdAt,id})
       }catch (error){
         console.log('error creating the user', error.message)
       }
+      
     }
     return userSnapshot;
+    }else{
+       alert('oi')
+    }
   }
