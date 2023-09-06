@@ -6,7 +6,7 @@ import { useContext } from 'react'
 const Confirmation=()=>{
 
     const {userDetails}=useContext(UserDetailsContext)
-    console.log(userDetails)
+    
     //const {nickname, email, id}=details
     
     return(

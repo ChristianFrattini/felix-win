@@ -18,7 +18,6 @@ const firebaseConfig = {
 
   export const db=getFirestore();
 
-
   const createUniqueId=(length)=> {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
     let code = '';
@@ -31,7 +30,7 @@ const firebaseConfig = {
     return code;
   }
 
-  const emailChecker= async(email)=>{  //determines whether the user has already applied for the prize dra
+  /*export const emailChecker= async(email)=>{  //determines whether the user has already applied for the prize dra
     const docRef = doc(db, 'users', email);  //collection is taken with the email currently submitted
     const docSnap = await getDoc(docRef); 
 
@@ -42,7 +41,7 @@ const firebaseConfig = {
     } else {
         console.log("Creating New User Document...");
     }
-  }
+  }*/
 
 
 
@@ -54,7 +53,9 @@ const firebaseConfig = {
     //const id=createUniqueId(50)
     //console.log(id)
 
-    emailChecker(email) //check if email has already been registered
+    //emailChecker(email) //check if email has already been registered
+    
+    console.log('here')
 
     const userDocRef = doc(db,'users', email)
     
@@ -71,6 +72,10 @@ const firebaseConfig = {
         console.log('error creating the user', error.message)
       }
       
+    }else{
+        console.log("Document data: existing");
+        alert('Email already registered for the prize draw!')
+        return
     }
     return userSnapshot;
     

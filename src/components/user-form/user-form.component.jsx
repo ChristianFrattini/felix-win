@@ -16,10 +16,10 @@ const UserForm=()=>{
 
     const {updateDetails}= useContext(UserDetailsContext)
 
-    const navigate=useNavigate()
-
     const [formFields,setFormFields]=useState(defaultFormFields)
     const {nickname, email}=formFields
+
+    const navigate=useNavigate()
 
     const createUniqueId=(length)=> {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
@@ -38,11 +38,16 @@ const UserForm=()=>{
 
         try{
             const id=createUniqueId(50);
-            await createUserDocument (nickname, email, id); // creates the user document
+            if(!await createUserDocument (nickname, email, id)){ // creates the user document if they dont exist.if they exist return
+                setFormFields(defaultFormFields);
+                //console.log('return')
+                return
+            }; 
             const userDetails={nickname: nickname, email: email, id:id}
             setFormFields(defaultFormFields);  //clears form fields setting them to default
             updateDetails(userDetails)
-            console.log(userDetails)
+            navigate('/confirmation')
+            //console.log(userDetails)
             
         }
         catch(error){
