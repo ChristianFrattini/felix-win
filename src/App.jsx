@@ -9,6 +9,7 @@ import AdPage from './components/ad-page/ad-page.component'
 import Info from './components/ROUTES/info/info.component'
 import WinnerPage from './components/ROUTES/winner/winner.component'
 import UserForm from './components/user-form/user-form.component'
+import Confirmation from './components/confirmation/confirmation.component'
 
 const App=()=> {
   return (
@@ -19,6 +20,7 @@ const App=()=> {
         <Route path='info' element={<Info/>}/>
         <Route path='winner' element={<WinnerPage/>}/>
         <Route path='user-form-sub' element={<UserForm/>}/>
+        <Route path='confirmation' element={<Confirmation/>}/>
       </Route>
     </Routes>
   )

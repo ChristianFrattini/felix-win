@@ -1,5 +1,7 @@
 import {initializeApp} from 'firebase/app'
-import {getFirestore, setDoc, getDoc, doc, collection} from 'firebase/firestore'
+import {getFirestore, setDoc, getDoc, doc} from 'firebase/firestore'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const firebaseConfig = {
@@ -16,7 +18,6 @@ const firebaseConfig = {
 
   export const db=getFirestore();
 
-  //const createUniqueId=()=> Math.random().toString(36)
 
   const createUniqueId=(length)=> {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
@@ -30,17 +31,16 @@ const firebaseConfig = {
     return code;
   }
 
-  const emailChecker= async(email)=>{
-    const docRef = doc(db, 'users', email);
-    const docSnap = await getDoc(docRef);
+  const emailChecker= async(email)=>{  //determines whether the user has already applied for the prize dra
+    const docRef = doc(db, 'users', email);  //collection is taken with the email currently submitted
+    const docSnap = await getDoc(docRef); 
 
-    if (docSnap.exists()) {
+    if (docSnap.exists()) {  //if the docsnap exists(email existing) then return
         console.log("Document data: existing");
         alert('Email already registered for the prize draw')
         return
     } else {
-        // docSnap.data() will be undefined in this case
-        console.log("No such document!");
+        console.log("Creating New User Document...");
     }
   }
 
@@ -48,16 +48,16 @@ const firebaseConfig = {
 
 
 
-  export const createUserDocument=async (nickname, email)=>{
-    const id=createUniqueId(50)
-    console.log(id)
 
-    if(emailChecker(email)){
+
+  export const createUserDocument=async (nickname, email, id)=>{
+    //const id=createUniqueId(50)
+    //console.log(id)
+
+    emailChecker(email) //check if email has already been registered
 
     const userDocRef = doc(db,'users', email)
-
-    console.log('here')
-
+    
     const userSnapshot=await getDoc(userDocRef);
 
     if(!userSnapshot.exists()){  //if document does not exist then create one
@@ -65,13 +65,13 @@ const firebaseConfig = {
 
       try{
         await setDoc(userDocRef, {nickname,email,createdAt,id})
+        //setSubmittedDetails({id:id, nickname:nickname})
+        
       }catch (error){
         console.log('error creating the user', error.message)
       }
       
     }
     return userSnapshot;
-    }else{
-       alert('oi')
-    }
+    
   }

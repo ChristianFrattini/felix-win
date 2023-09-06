@@ -1,7 +1,10 @@
 import './user-form.styles.scss'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import FormInput from '../form-input/form-input.component'
 import { createUserDocument } from '../../utils/firebase.utils'
+import { useNavigate } from 'react-router-dom'
+import {UserDetailsContext} from '../../contexts/details.context'
+import Confirmation from '../confirmation/confirmation.component'
 
 
 const UserForm=()=>{
@@ -11,16 +14,36 @@ const UserForm=()=>{
         email: ''
     }
 
+    const {updateDetails}= useContext(UserDetailsContext)
+
+    const navigate=useNavigate()
+
     const [formFields,setFormFields]=useState(defaultFormFields)
     const {nickname, email}=formFields
+
+    const createUniqueId=(length)=> {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
+        let code = '';
+      
+        for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length);
+          code += characters.charAt(randomIndex);
+        }
+      
+        return code;
+    }
 
     const handleSubmit=async(event)=>{
         event.preventDefault();  //prevents default behaviors for the event
 
         try{
-            await createUserDocument (nickname, email); // creates the user document
+            const id=createUniqueId(50);
+            await createUserDocument (nickname, email, id); // creates the user document
+            const userDetails={nickname: nickname, email: email, id:id}
             setFormFields(defaultFormFields);  //clears form fields setting them to default
-            //console.log(response)
+            updateDetails(userDetails)
+            console.log(userDetails)
+            
         }
         catch(error){
                 console.log('user creation error', error);  // for any other generic error alert user
@@ -32,7 +55,6 @@ const UserForm=()=>{
         const {name, value}=event.target
         setFormFields({...formFields, [name]:value})
     }
-
     return(
         <div className='user-form-container'>
             <form onSubmit={handleSubmit}>

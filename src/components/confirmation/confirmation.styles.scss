@@ -1,0 +1,9 @@
+.details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Optional: center horizontally */
+    
+    .span{
+        margin: 5px
+    }
+}
