@@ -4,7 +4,8 @@ import FormInput from '../form-input/form-input.component'
 import { createUserDocument } from '../../utils/firebase.utils'
 import { useNavigate } from 'react-router-dom'
 import {UserDetailsContext} from '../../contexts/details.context'
-import Confirmation from '../confirmation/confirmation.component'
+import {enableButtonContext} from '../../contexts/enable-submission.context'
+
 
 
 const UserForm=()=>{
@@ -15,6 +16,7 @@ const UserForm=()=>{
     }
 
     const {updateDetails}= useContext(UserDetailsContext)
+    const {buttonEnabled}=useContext(enableButtonContext)
 
     const [formFields,setFormFields]=useState(defaultFormFields)
     const {nickname, email}=formFields
@@ -67,7 +69,7 @@ const UserForm=()=>{
                 <FormInput label='Nickname' type='text' name='nickname' value ={nickname} onChange={onChangeHandler} required/>
                 <FormInput label='Email' type='email' name='email' value ={email} onChange={onChangeHandler} required/>
 
-                <button className='submit-button'>Submit</button>
+                <button className='submit-button' disabled={buttonEnabled}>Submit</button>
 
             </form>
 
