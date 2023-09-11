@@ -8,7 +8,8 @@ const Jackpot=()=>{
         <div>
             <div>
                 <h2>Jackpot</h2>
-                <h3>The current Jackpot is: {_JACKPOT} </h3>
+                <h3>The current Jackpot is: </h3>
+                <h2>${_JACKPOT}</h2>
                 <span>The next lottery draw is set on the {_EXTRACTION_DATE} </span>
             </div>
             <div>

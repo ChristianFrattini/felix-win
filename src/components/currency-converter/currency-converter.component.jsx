@@ -11,7 +11,7 @@ const API_URL= 'https://api.exchangeratesapi.io/v1/latest?access_key=b9c021bb451
 function CurrencyConverter({ initialAmount }) {
     const [exchangeRates, setExchangeRates] = useState({});
     const [convertedAmounts, setConvertedAmounts] = useState({});
-    const selectedCurrencies = ['EUR', 'GBP', 'CHF', 'USD', 'SOL', 'BRL', 'BOB', 'KWD','BHD', 'OMR', 'TND', 'LYD', 'MAD', 'PHP','JPY','CNY', 'MXN']; // Replace with the currencies you want to display
+    const selectedCurrencies = ['EUR', 'GBP', 'CHF', 'USD', 'PEN', 'BRL', 'BOB', 'KWD','BHD', 'OMR', 'TND', 'LYD', 'MAD', 'PHP','JPY','CNY', 'MXN']; // Replace with the currencies you want to display
   
     useEffect(() => {
       async function fetchExchangeRates() {
