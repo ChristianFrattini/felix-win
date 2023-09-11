@@ -21,8 +21,8 @@ const AdPage=()=>{
                 <button onClick={handleOnClick}>Click</button>
             </div>
             <head>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7301195125462069"
-                crossorigin="anonymous"></script>
+            {/*<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7301195125462069"
+                crossorigin="anonymous"></script>*/}
             </head>
         </div>
     )
