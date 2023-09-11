@@ -16,7 +16,7 @@ const UserForm=()=>{
     }
 
     const {updateDetails}= useContext(UserDetailsContext)
-    const {buttonEnabled}=useContext(enableButtonContext)
+    const {buttonEnabled, disableButton}=useContext(enableButtonContext)
 
     const [formFields,setFormFields]=useState(defaultFormFields)
     const {nickname, email}=formFields
@@ -48,6 +48,7 @@ const UserForm=()=>{
             const userDetails={nickname: nickname, email: email, id:id}
             setFormFields(defaultFormFields);  //clears form fields setting them to default
             updateDetails(userDetails)
+            disableButton();
             navigate('/confirmation')
             //console.log(userDetails)
             

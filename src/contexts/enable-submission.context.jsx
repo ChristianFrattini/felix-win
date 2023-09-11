@@ -10,9 +10,13 @@ const EnableButtonProvider=({children})=>{
         setButtonEnabled(false)
     }
 
+    const disableButton=()=>{
+        setButtonEnabled(true)
+    }
+
 
     return(
-        <enableButtonContext.Provider value={{buttonEnabled, enableButton}}>{children}</enableButtonContext.Provider>
+        <enableButtonContext.Provider value={{buttonEnabled, enableButton, disableButton}}>{children}</enableButtonContext.Provider>
     )
 }
 export default EnableButtonProvider
