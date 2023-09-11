@@ -13,8 +13,10 @@ const Navigation =()=>{
                     <CupLogo className='logo'/>
                 </Link>
                 <div className='links-container'>
-                    <Link className='link' to='info'><h2>Info</h2></Link>
-                    <Link className='link' to='winner'><h2>Winner</h2></Link>
+                    <Link className='link' to='info'><h3>Info</h3></Link>
+                    <Link className='link' to='jackpot'><h3>Jackpot</h3></Link>
+                    <Link className='link' to='winner'><h3>Winner</h3></Link>
+                    
                 </div>
             </div>
             <Outlet/>

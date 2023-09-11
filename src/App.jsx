@@ -10,6 +10,7 @@ import Info from './components/ROUTES/info/info.component'
 import WinnerPage from './components/ROUTES/winner/winner.component'
 import UserForm from './components/user-form/user-form.component'
 import Confirmation from './components/confirmation/confirmation.component'
+import Jackpot from './components/ROUTES/jackpot/jackpot.component'
 
 const App=()=> {
   return (
@@ -21,6 +22,7 @@ const App=()=> {
         <Route path='winner' element={<WinnerPage/>}/>
         <Route path='user-form-sub' element={<UserForm/>}/>
         <Route path='confirmation' element={<Confirmation/>}/>
+        <Route path='jackpot' element={<Jackpot/>}/>
       </Route>
     </Routes>
   )

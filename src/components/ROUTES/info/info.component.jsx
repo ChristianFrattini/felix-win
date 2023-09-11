@@ -22,7 +22,12 @@ const Info=()=>{
             />
 
             <QuestionToggler
-                question='What happens after the extraction?'
+                question='When is the next lottery draw day?'
+                answer='If you want to know more about the jackpot and the next lottery draw day click on "Jackpot" in the top right corner. '
+            />
+
+            <QuestionToggler
+                question='What happens after the winner is selected?'
                 answer='After the extraction day, our team will personally contact the winner to discuss the form of payment.'
             />
 
@@ -33,7 +38,7 @@ const Info=()=>{
 
             <QuestionToggler
                 question='Contact us'
-                answer='if you have any question, please get in touch at: EMAIL'
+                answer='If you have any question, please get in touch at: EMAIL' 
             />
         </div>
     )

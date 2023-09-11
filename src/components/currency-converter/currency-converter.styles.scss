@@ -1,0 +1,36 @@
+/* CurrencyConverter.scss */
+.currency-converter-container {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    text-align: center;
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        font-size: 1.2rem;
+        margin: 5px 0;
+  
+        .currency-code {
+          font-weight: bold;
+          margin-right: 5px;
+        }
+  
+        .converted-amount {
+          font-weight: normal;
+          color: #007bff; /* Blue color for amounts */
+        }
+      }
+    }
+  }
+  

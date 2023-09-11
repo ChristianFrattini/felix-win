@@ -1,5 +1,6 @@
 import {useNavigate } from 'react-router-dom'
 import './welcome-page.styles.scss'
+import { _EXTRACTION_DATE } from '../../var/var'
 
 const WelcomePage=()=>{
 
@@ -15,7 +16,7 @@ const WelcomePage=()=>{
                 <h1 className='welcome'>Welcome to FelixWin</h1>
             </div>
             <div className='introduction-container'>
-                <h3 className='h3-info'>The extraction date is currently set on the 25th of each month at 12.00PM GMT</h3>
+                <h3 className='h3-info'>The extraction date is currently set on the {_EXTRACTION_DATE}</h3>
                 <span className='span-info'>Please read the info panel before entering for the prize draw</span>
             </div>
             <div className='button-container'>
