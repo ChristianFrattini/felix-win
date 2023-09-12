@@ -38,7 +38,7 @@ const Info=()=>{
 
             <QuestionToggler
                 question='Contact us'
-                answer='If you have any question, please get in touch at: EMAIL' 
+                answer='If you have any question, please get in touch at: EMAIL or INSTAGRAM' 
             />
         </div>
     )

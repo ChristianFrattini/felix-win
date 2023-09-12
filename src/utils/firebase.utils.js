@@ -18,7 +18,7 @@ const firebaseConfig = {
 
   export const db=getFirestore();
 
-  const createUniqueId=(length)=> {
+  /*const createUniqueId=(length)=> {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
     let code = '';
   
@@ -28,7 +28,7 @@ const firebaseConfig = {
     }
   
     return code;
-  }
+  }*/
 
   /*export const emailChecker= async(email)=>{  //determines whether the user has already applied for the prize dra
     const docRef = doc(db, 'users', email);  //collection is taken with the email currently submitted
@@ -55,7 +55,7 @@ const firebaseConfig = {
 
     //emailChecker(email) //check if email has already been registered
     
-    console.log('here')
+    //console.log('here')
 
     const userDocRef = doc(db,'users', email)
     
@@ -80,3 +80,18 @@ const firebaseConfig = {
     return userSnapshot;
     
   }
+
+
+  export const getVar=async()=>{
+      const docRef = doc(db,'vars', 'vars')
+      const dataSnapshot=await getDoc(docRef);
+      if(dataSnapshot.exists()){
+        const data=dataSnapshot.data()
+        //console.log(data.jackpot)
+        return data
+      }
+      
+  }
+
+  
+  
