@@ -1,7 +1,9 @@
 import { _WINNER_ID, _WINNER_NICKNAME, _EXTRACTION_DATE_DAY, _EXTRACTION_DATE_YEAR,_EXTRACTION_DATE_TIME, _EXTRACTION_DATE_MONTH } from '../../../var/var'
 import './winner.styles.scss'
+import { useData } from '../../../contexts/data.context'
 
 const WinnerPage=()=>{
+    useData()
     return(
         <div>
             <h1>Winner</h1>

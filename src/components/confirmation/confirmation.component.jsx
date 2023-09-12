@@ -2,10 +2,10 @@ import './confirmation.styles.scss'
 import {UserDetailsContext} from '../../contexts/details.context'
 import { useContext } from 'react'
 import {_EXTRACTION_DATE_DAY, _EXTRACTION_DATE_YEAR,_EXTRACTION_DATE_TIME, _EXTRACTION_DATE_MONTH} from '../../var/var'
-
+import { useData } from '../../contexts/data.context'
 
 const Confirmation=()=>{
-
+    useData()
     const {userDetails}=useContext(UserDetailsContext)
     
     //const {nickname, email, id}=details

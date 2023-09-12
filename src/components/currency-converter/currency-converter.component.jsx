@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-const API_URL= 'https://api.exchangeratesapi.io/v1/latest?access_key=b9c021bb4510b6921267e1ab31adc7ae&base=USD'
+const API_URL= 'https://api.exchangeratesapi.io/v1/latest?access_key=b9c021bb4510b6921267e1ab31adc7ae&base=GBP'
 
 
 function CurrencyConverter({ initialAmount }) {

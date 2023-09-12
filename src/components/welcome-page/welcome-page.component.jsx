@@ -1,10 +1,10 @@
 import {useNavigate } from 'react-router-dom'
 import './welcome-page.styles.scss'
-import { _EXTRACTION_DATE_DAY, _EXTRACTION_DATE_YEAR,_EXTRACTION_DATE_TIME, _EXTRACTION_DATE_MONTH } from '../../var/var'
-import { getVar } from '../../utils/firebase.utils'
+import { _EXTRACTION_DATE_DAY, _EXTRACTION_DATE_YEAR,_EXTRACTION_DATE_TIME, _EXTRACTION_DATE_MONTH, databaseDataFetching } from '../../var/var'
+import { useData } from '../../contexts/data.context'
 
 const WelcomePage=()=>{
-
+    useData()
     const navigate=useNavigate()
 
     const onClickHandler=()=>{
