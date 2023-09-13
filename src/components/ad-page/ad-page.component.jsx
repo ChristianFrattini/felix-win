@@ -16,9 +16,9 @@ const AdPage=()=>{
 
     return(
         
-        <div></div>
-            
-            
+     
+                <button onClick={handleOnClick}> Click</button>
+  
     )
 }
 
