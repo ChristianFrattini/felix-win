@@ -17,8 +17,8 @@ const WelcomePage=()=>{
                 <h1 className='welcome'>Welcome to FelixWin</h1>
             </div>
             <div className='introduction-container'>
-                <h3 className='h3-info'>The extraction date is currently set on the {_EXTRACTION_DATE_DAY} {_EXTRACTION_DATE_MONTH} {_EXTRACTION_DATE_YEAR} at {_EXTRACTION_DATE_TIME} GMT</h3>
-                <span className='span-info'>Please read the info panel before entering for the prize draw</span>
+                <h3 className='h3-info'>Welcome to Felix Win the lottery available to everyone in the world</h3>
+                <span className='span-info'>Find out more in the Info panel on the top-right corner or click on 'Click Here to Start'</span>
             </div>
             <div className='button-container'>
                 <button className='homepage-button' onClick={onClickHandler}>Click Here to Start</button>

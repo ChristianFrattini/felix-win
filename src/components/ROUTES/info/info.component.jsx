@@ -18,7 +18,7 @@ const Info=()=>{
 
             <QuestionToggler
                 question='What details will I need to provide?'
-                answer='In oreder to be considered for the prize draw, we will need to submit your email and a nickname. These details will be safely stored in our database until the extraction day and subsequently deleted. We will NOT share your personal email with any third-party websites.'
+                answer='In order to be considered for the prize draw, we will need to submit your email and a nickname. These details will be safely stored in our database until the extraction day and subsequently deleted. We will NOT share your personal email with any third-party websites.'
             />
 
             <QuestionToggler
@@ -38,7 +38,7 @@ const Info=()=>{
 
             <QuestionToggler
                 question='Contact us'
-                answer='If you have any question, please get in touch at: EMAIL or INSTAGRAM' 
+                answer='If you have any question, please get in touch with us at: EMAIL or INSTAGRAM' 
             />
         </div>
     )
