@@ -1,13 +1,13 @@
 /* Accordion container */
 .accordion {
-    border: 1px solid #ddd;
+    border: 1px solid #7eafe7;;
     border-radius: 4px;
     margin-bottom: 10px;
     overflow: hidden;
   
     /* Accordion header */
     .accordion-header {
-      background-color: #f5f5f5;
+      background-color: #6ca6e9;;
       padding: 10px 20px;
       cursor: pointer;
       display: flex;
@@ -38,8 +38,8 @@
     /* Accordion content */
     .accordion-content {
       padding: 10px 20px;
-      background-color: #fff;
-      border-top: 1px solid #ddd;
+      background-color: #8db5e2;
+      border-top: 1px solid #7eafe7;
     }
   
     /* Opened accordion header styles */
