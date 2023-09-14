@@ -8,7 +8,7 @@ const WelcomePage=()=>{
     const navigate=useNavigate()
 
     const onClickHandler=()=>{
-        navigate('/clickad')
+        navigate('/infopreview')
     }
 
     return(

@@ -5,7 +5,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import WelcomePage from './components/welcome-page/welcome-page.component'
 import Navigation from './components/ROUTES/navigation/navigation.component'
-import AdPage from './components/ad-page/ad-page.component'
+import InfoPreview from './components/ad-page/ad-page.component'
 import Info from './components/ROUTES/info/info.component'
 import WinnerPage from './components/ROUTES/winner/winner.component'
 import UserForm from './components/user-form/user-form.component'
@@ -17,7 +17,7 @@ const App=()=> {
     <Routes>
       <Route path='/' element={<Navigation/>}>
         <Route path='' element={<WelcomePage/>}/>
-        <Route path='clickad' element={<AdPage/>}/>
+        <Route path='infopreview' element={<InfoPreview/>}/>
         <Route path='info' element={<Info/>}/>
         <Route path='winner' element={<WinnerPage/>}/>
         <Route path='user-form-sub' element={<UserForm/>}/>

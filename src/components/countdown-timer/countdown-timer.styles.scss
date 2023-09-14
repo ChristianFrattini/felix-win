@@ -1,0 +1,26 @@
+// CountdownTimer.scss
+
+.countdown-timer-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .header {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .timer-values-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .timer-values {
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
