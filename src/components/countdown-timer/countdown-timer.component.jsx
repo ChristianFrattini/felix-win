@@ -5,11 +5,8 @@ import { _EXTRACTION_DATE_ISO } from '../../var/var'
 import { useData } from '../../contexts/data.context'
 
 const CountdownTimer = ({targetDate}) => {
-    //useData()
-  //const targetDate = _EXTRACTION_DATE_ISO;
-  
-
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
+
 
   useEffect(() => {
     const timerInterval = setInterval(() => {
@@ -17,7 +14,7 @@ const CountdownTimer = ({targetDate}) => {
     }, 1000);
 
     return () => clearInterval(timerInterval);
-  }, []);
+  });
 
   function calculateTimeRemaining() {
     const now = new Date().getTime();
