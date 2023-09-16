@@ -8,12 +8,12 @@ const Info=()=>{
         <div className='info-container'>
             <QuestionToggler
                 question='What is Felix Win?'
-                answer='Felix Win is a simple online lottery available to everyone in the world. The amount of money available is entirely dependent on the amount of people visiting the website.' //and it will be added to the jackpot every time you click on an ad.'
+                answer='Felix Win is a simple online lottery available to everyone in the world. The amount of money available is entirely dependent on the amount of people visiting the website.' 
             />
 
             <QuestionToggler
                 question='How does it work?'
-                answer='To enter the prize draw, all you have to do is go to the homepage, click the "Click Here to Start" button, click on the ad and finally enter your details in the form provided.'
+                answer='To enter the prize draw, all you have to do is go to the homepage, click the "Click Here to Start" button, make sure you have read this information panel by ticking the checkbox and submit your details.'
             />
 
             <QuestionToggler

@@ -2,7 +2,7 @@ import './countdown-timer.styles.scss'
 
 import { useState, useEffect } from 'react';
 import { _EXTRACTION_DATE_ISO } from '../../var/var'
-import { useData } from '../../contexts/data.context'
+
 
 const CountdownTimer = ({targetDate}) => {
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
