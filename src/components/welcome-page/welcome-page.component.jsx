@@ -18,10 +18,10 @@ const WelcomePage=()=>{
             </div>
             <div className='introduction-container'>
                 <h3 className='h3-info'>Welcome to Felix Win the lottery available to everyone in the world</h3>
-                <span className='span-info'>Find out more in the Info panel on the top-right corner or click on 'Click Here to Start'</span>
+                <span className='span-info'>Guaranteed Winner at every draw day</span>
             </div>
             <div className='button-container'>
-                <button className='homepage-button' onClick={onClickHandler}>Click Here to Start</button>
+                <button className='homepage-button' onClick={onClickHandler} >Play the Felix Win Lottery</button>
             </div>
         </div>
     )

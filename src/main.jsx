@@ -6,6 +6,7 @@ import './index.css'
 import UserDetailsProvider from './contexts/details.context.jsx'
 import EnableButtonProvider from './contexts/enable-submission.context.jsx'
 import { DataProvider } from './contexts/data.context.jsx'
+import NumbersProvider from './contexts/numbers.context.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,7 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <DataProvider>
       <EnableButtonProvider>
         <UserDetailsProvider>
-          <App />
+          <NumbersProvider>
+            <App />
+          </NumbersProvider>
         </UserDetailsProvider>
       </EnableButtonProvider>
       </DataProvider>

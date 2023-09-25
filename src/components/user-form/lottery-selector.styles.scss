@@ -1,0 +1,57 @@
+.lottery-selector {
+    text-align: center;
+    padding: 20px;
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .number-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      
+      .number {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s;
+        
+        &.selected {
+          background-color: #007bff;
+          color: #fff;
+        }
+        
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+    
+    .message {
+      color: red;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    
+    .selected-numbers {
+      margin-top: 20px;
+      
+      h2 {
+        font-size: 20px;
+      }
+      
+      p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+  

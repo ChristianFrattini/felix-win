@@ -1,0 +1,26 @@
+/* Define the styling for the download button */
+.download-button {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for spacing */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  
+    /* Hover effect */
+    &:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+    }
+  
+    /* Disabled state styling */
+    &:disabled {
+      background-color: #ccc; /* Change the background color */
+      color: #666; /* Change the text color */
+      cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+    }
+  }
+  
+  /* Apply the download-button class to your download button element */
+  

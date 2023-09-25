@@ -3,12 +3,11 @@ import {UserDetailsContext} from '../../contexts/details.context'
 import { useContext } from 'react'
 import {_EXTRACTION_DATE_DAY, _EXTRACTION_DATE_YEAR,_EXTRACTION_DATE_TIME, _EXTRACTION_DATE_MONTH} from '../../var/var'
 import { useData } from '../../contexts/data.context'
+import TicketGenerator from '../ticket-generator/ticket-generator.component'
 
 const Confirmation=()=>{
     useData()
     const {userDetails}=useContext(UserDetailsContext)
-    
-    //const {nickname, email, id}=details
     
     return(
         <div>
@@ -17,18 +16,21 @@ const Confirmation=()=>{
             <h3>Your details</h3>
             <div className='details-container'>
                 <span className='span'>
-                    nickname:  {userDetails.nickname}
+                    Nickname:  {userDetails.nickname}
                 </span>
                 <span className='span'>
-                    id:  {userDetails.id}
+                    ID:  {userDetails.id}
                 </span>
                 <span className='span'>
-                    email:  {userDetails.email}
+                    Email:  {userDetails.email}
+                </span>
+                <span className='span'>
+                    Your Numbers:  {userDetails.numbers}
                 </span>
             </div>
-            
+            <TicketGenerator ticketDetails={userDetails}/>
         </div>
-    )
+    ) 
 }
 
 export default Confirmation

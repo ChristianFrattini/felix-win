@@ -18,38 +18,11 @@ const firebaseConfig = {
 
   export const db=getFirestore();
 
-  /*const createUniqueId=(length)=> {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
-    let code = '';
-  
-    for (let i = 0; i < length; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length);
-      code += characters.charAt(randomIndex);
-    }
-  
-    return code;
-  }*/
-
-  /*export const emailChecker= async(email)=>{  //determines whether the user has already applied for the prize dra
-    const docRef = doc(db, 'users', email);  //collection is taken with the email currently submitted
-    const docSnap = await getDoc(docRef); 
-
-    if (docSnap.exists()) {  //if the docsnap exists(email existing) then return
-        console.log("Document data: existing");
-        alert('Email already registered for the prize draw')
-        return
-    } else {
-        console.log("Creating New User Document...");
-    }
-  }*/
 
 
 
 
-
-
-
-  export const createUserDocument=async (nickname, email, id)=>{
+  export const createUserDocument=async (nickname, email, id, selectedNumbers)=>{
     //const id=createUniqueId(50)
     //console.log(id)
 
@@ -61,11 +34,14 @@ const firebaseConfig = {
     
     const userSnapshot=await getDoc(userDocRef);
 
+
+
+
     if(!userSnapshot.exists()){  //if document does not exist then create one
       const createdAt= new Date(); // creates date
 
       try{
-        await setDoc(userDocRef, {nickname,email,createdAt,id})
+        await setDoc(userDocRef, {nickname,email,selectedNumbers, createdAt,id})
         //setSubmittedDetails({id:id, nickname:nickname})
         
       }catch (error){
@@ -80,6 +56,8 @@ const firebaseConfig = {
     return userSnapshot;
     
   }
+
+
 
 
   export const getVar=async()=>{
