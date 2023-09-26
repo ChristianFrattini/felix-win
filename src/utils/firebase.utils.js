@@ -50,7 +50,7 @@ const firebaseConfig = {
       
     }else{
         console.log("Document data: existing");
-        alert('Email already registered for the prize draw!')
+        alert('Registration unsuccessful. Email already registered for the prize draw!')
         return
     }
     return userSnapshot;

@@ -27,11 +27,12 @@
         &.selected {
           background-color: #007bff;
           color: #fff;
+          transition: background-color 0.3s;
         }
         
-        &:hover {
+        /*&:hover {
           background-color: #32b817;
-        }
+        }*/
       }
     }
     
