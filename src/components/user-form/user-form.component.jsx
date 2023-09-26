@@ -57,7 +57,7 @@ const UserForm=()=>{
         }
       };
 
-      console.log(selectedNumbers)
+      
       const renderNumbers = () => {
         const numbers = [];
         for (let i = 1; i <= maxNumbers; i++) {
