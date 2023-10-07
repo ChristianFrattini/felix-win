@@ -32,7 +32,7 @@ const UserForm=()=>{
     const navigate=useNavigate()
 
     const createUniqueId=(length)=> {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         let code = '';
       
         for (let i = 0; i < length; i++) {
